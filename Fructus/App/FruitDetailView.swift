@@ -33,14 +33,17 @@ struct FruitDetailView: View {
                             
                             Text(fruit.description)
                                 .multilineTextAlignment(.leading)
+                            
+                            SourceLinkView()
+                                .padding(.top, 10)
+                                .padding(.bottom, 40)
                         }
                         .padding(.horizontal, 20)
                     }
                     .frame(maxWidth: 640, alignment: .center)
                 }
-                .navigationTitle(fruit.title)
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar(.hidden)
+                //.toolbar(.hidden)
             }
             .ignoresSafeArea(.container, edges: .top)
         }
