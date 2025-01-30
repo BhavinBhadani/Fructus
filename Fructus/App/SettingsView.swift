@@ -17,6 +17,14 @@ struct SettingsView: View {
                     
                 }
                 .navigationTitle("Settings")
+                .navigationBarItems(
+                    trailing:
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                        }
+                )
                 .padding()
             }
         }
