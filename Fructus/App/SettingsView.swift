@@ -31,6 +31,16 @@ struct SettingsView: View {
                               .font(.footnote)
                         }
                     }
+                    
+                    GroupBox(
+                        label: SettingsLabelView(title: "Applications", image: "apps.iphone")
+                    ) {
+                        Divider()
+                            .padding(.vertical, 4)
+                        
+                        
+                    }
+
                 }
                 .navigationTitle("Settings")
                 .navigationBarItems(
