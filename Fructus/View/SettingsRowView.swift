@@ -14,20 +14,27 @@ struct SettingsRowView: View {
     var linkDestination: String? = nil
     
     var body: some View {
-        HStack {
-            Text(name)
-                .foregroundStyle(.gray)
-            Spacer()
-            if let content {
-                Text(content)
-            } else if let linkLabel,
-                      let linkDestination,
-                      let linkURL = URL(string: "https://\(linkDestination)") {
-                Link(destination: linkURL) {
-                    Text(linkLabel)
+        VStack {
+            Divider()
+                .padding(.vertical, 4)
+            
+            HStack {
+                Text(name)
+                    .foregroundStyle(.gray)
+                Spacer()
+                Group {
+                    if let content {
+                        Text(content)
+                    } else if let linkLabel,
+                              let linkDestination,
+                              let linkURL = URL(string: "https://\(linkDestination)") {
+                        Link(destination: linkURL) {
+                            Text(linkLabel)
+                        }
+                        Image(systemName: "arrow.up.right.square")
+                            .foregroundStyle(.pink)
+                    }
                 }
-                Image(systemName: "arrow.up.right.square")
-                    .foregroundStyle(.pink)
             }
         }
     }

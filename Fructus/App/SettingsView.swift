@@ -35,10 +35,13 @@ struct SettingsView: View {
                     GroupBox(
                         label: SettingsLabelView(title: "Applications", image: "apps.iphone")
                     ) {
-                        Divider()
-                            .padding(.vertical, 4)
-                        
-                        
+                        SettingsRowView(name: "Developer", content: "Bhavin")
+                        SettingsRowView(name: "Designer", content: "Robert Petras")
+                        SettingsRowView(name: "Compatibility", content: "iOS 16")
+                        SettingsRowView(name: "Website", linkLabel: "Credo Academy", linkDestination: "credo.academy")
+                        SettingsRowView(name: "Twitter", linkLabel: "@RobertPetras", linkDestination: "twitter.com/robertpetras")
+                        SettingsRowView(name: "SwiftUI", content: "4.0")
+                        SettingsRowView(name: "Version", content: "1.5.0")
                     }
 
                 }
